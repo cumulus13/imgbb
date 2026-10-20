@@ -1,0 +1,38 @@
+[build-system]
+requires = [
+    "setuptools>=61.0.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "imgbb-cli"
+version = "1.0.1"
+description = "A production-ready CLI tool and library for uploading images to ImgBB with rich formatting."
+readme = "README.md"
+authors = [
+    { name = "Hadi Cahyadi", email = "cumulus13@gmail.com" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Topic :: Internet :: WWW/HTTP",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "requests>=2.25.0",
+    "rich>=10.0.0",
+]
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+imgbb-cli = "imgbb.cli:main"
+imgbb = "imgbb.cli:main"
+
+[tool.setuptools.packages.find]
+include = [
+    "imgbb*",
+]
