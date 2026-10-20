@@ -3,7 +3,7 @@
 A lightweight, production-ready Command Line Interface (CLI) tool and Python library for uploading images directly to [ImgBB](https://imgbb.com/) with beautiful terminal formatting via [Rich](https://github.com/Textualize/rich).
 
 <p align="center">
-  <img src="https://simgbb.com/images/logo.png" width="20%" alt="ImgBB Logo">
+  <img src="https://simgbb.com/images/logo.png" width="100%" alt="ImgBB Logo">
 </p>
 
 ## Features
@@ -51,6 +51,32 @@ export IMGBB_API_KEY="your_api_key_here"
 ---
 
 ## Usage
+
+```bash
+Usage: imgbb [-h] [-k API_KEY] [-e EXPIRATION] [-n NAME]
+             [-f {pretty,json,url,display_url,delete_url,thumb_url,medium_url}]
+             [IMAGES ...]
+
+A production-ready CLI tool to upload images to ImgBB with wildcard support and flexible outputs.
+
+Positional Arguments:
+  IMAGES                Path or wildcard pattern to the image file(s) to upload (e.g., *.jpg,
+                        image?.png, *).
+
+Options:
+  -h, --help            show this help message and exit
+  -k, --key API_KEY     ImgBB API key. Can also be set via IMGBB_API_KEY environment variable.
+  -e, --expiration EXPIRATION
+                        Enable auto-deletion after given seconds (60-15552000).
+  -n, --name NAME       Custom name for the uploaded image file (applicable if uploading a single
+                        file).
+  -f, --format {pretty,json,url,display_url,delete_url,thumb_url,medium_url}
+                        Output format style or specific JSON field to extract: - pretty : Rich
+                        formatted panel view (default) - json : Full raw JSON response - url :
+                        Direct image URL only - display_url : Viewer / display page URL only -
+                        delete_url : Deletion URL only - thumb_url : Thumbnail URL only -
+                        medium_url : Medium image URL only
+```
 
 ### 1. Standard Rich Output (Default)
 

@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "imgbb-cli"
-version = "1.0.1"
+version = "1.0.2"
 description = "A production-ready CLI tool and library for uploading images to ImgBB with rich formatting."
 readme = "README.md"
 authors = [
