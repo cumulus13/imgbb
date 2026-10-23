@@ -10,3 +10,8 @@
 
 # Added entries (1 items)
 __pycache__/
+
+# Added entries (3 items)
+dist/
+*.ini
+*.sha256

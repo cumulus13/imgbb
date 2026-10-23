@@ -26,7 +26,7 @@ class ImgBBClient:
         Initialize the ImgBB client.
         Looks for IMGBB_API_KEY environment variable if api_key is not provided.
         """
-        self.api_key = api_key or os.getenv("IMGBB_API_KEY")
+        self.api_key = os.getenv("IMGBB_API_KEY", api_key)
         if not self.api_key:
             raise ImgBBError(
                 "API key not found. Pass it explicitly or set the IMGBB_API_KEY environment variable."
